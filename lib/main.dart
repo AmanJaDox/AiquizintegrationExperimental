@@ -2,21 +2,35 @@ import "package:flutter/material.dart";
 import "package:hexcolor/hexcolor.dart";
 import './quiz.dart';
 import './result.dart';
+import './intro.dart';
+import 'package:http/http.dart' as https;
+import 'dart:convert';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class QuizData extends StatefulWidget {
+  const QuizData({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
-    return _MyAppState();
+    return _QuizDataState();
   }
 }
 
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Your App Title',
+      home: IntroPage(), // Use IntroScreen as the home screen
+    );
+  }
+}
+
+void main() {
+  runApp(MyApp());
+}
+
+
+class _QuizDataState extends State<QuizData>{
   static const _data = [
     {
       'questionText':

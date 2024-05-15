@@ -28,3 +28,11 @@ class Answer extends StatelessWidget {
     );
   }
 }
+
+
+
+// Updating Git Code 
+//Open folder of code in terminal
+// git add .
+// git commit -m "Update quiz app code"
+// git push origin master
