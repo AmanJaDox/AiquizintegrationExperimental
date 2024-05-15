@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './main.dart';
 
 class IntroPage extends StatefulWidget {
   @override
@@ -25,7 +26,7 @@ class _IntroPageState extends State<IntroPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Enter your name to begin:',
+              'Enter what topic you want to generate questions on',
               style: TextStyle(fontSize: 20),
             ),
             Padding(
@@ -33,16 +34,15 @@ class _IntroPageState extends State<IntroPage> {
               child: TextField(
                 controller: _userNameController,
                 decoration: InputDecoration(
-                  hintText: 'Enter your name',
+                  hintText: 'Eg: Computer Science....',
                 ),
               ),
             ),
             ElevatedButton(
               onPressed: () {
-                // Handle user input here (e.g., navigate to next page)
-                // You'll implement this logic later
+                runApp(QuizData());
               },
-              child: Text('Continue'),
+              child: Text('Generate'),
             ),
           ],
         ),

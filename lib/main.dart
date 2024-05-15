@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 import "package:hexcolor/hexcolor.dart";
 import './quiz.dart';
 import './result.dart';
-import './intro.dart';
+import 'intro.dart';
 import 'package:http/http.dart' as https;
 import 'dart:convert';
 
