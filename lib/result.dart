@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './question.dart';
 import 'package:hexcolor/hexcolor.dart';
+import './main.dart';
 
 class Result extends StatelessWidget {
   final double resultScore;
@@ -60,9 +61,29 @@ class Result extends StatelessWidget {
                   ),
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(Colors.purple)),
+                          MaterialStateProperty.all(Color.fromARGB(255, 0, 167, 14))),
                   onPressed: resetHandler,
-                )
+                ), //Elevated button 1 ending
+                ElevatedButton( 
+                  child:SizedBox( 
+                    width: 200,
+                    child: Text( 
+                      'Try a new Topic?',
+                      textAlign: TextAlign.center,
+                      style: TextStyle( 
+                        fontWeight: FontWeight.w400,
+                        color: HexColor("#FEFEFE"),
+                      ),
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red,
+                  foregroundColor: Colors.grey,
+                  ),
+                  onPressed: () {
+                    runApp(MyApp());
+                  },
+                ),
               ],
             )));
   }
